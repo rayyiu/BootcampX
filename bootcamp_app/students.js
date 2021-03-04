@@ -8,8 +8,8 @@ const pool = new Pool({
 });
 
 const cohortName = process.argv[2];
-const max = process.argv[3] || 5;
-const values = [`%${cohortName}%`, max];
+const limit = process.argv[3] || 5;
+const values = [`%${cohortName}%`, limit];
 
 
 pool.query(`SELECT students.id as student_id, students.name as name, cohorts.name as cohort
